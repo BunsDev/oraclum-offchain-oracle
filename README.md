@@ -8,7 +8,7 @@ An off-chain oracle is a web service providing signed data that can be verified 
 For the price feeds that are available on Chainlink (or any other on-chain oracle) and sufficient in terms of latency (primarily determined by the deviation threshold), Chainlink would be great. However, that's not always the case. The cost of providing price feeds via on-chain oracle is significant. And that limits the availability and timeliness of the price feeds on Chainlink. You might have found a lot of wanted prices (or other market data) that are either unavailable on Chainlink or provided with a horrible deviation threshold (e.g. 0.5% for ETHUSD or 1% for BNBUSD by Chainlink on Ethereum).
 
 ## How do I use Oraclum?
-1. Deploy smart contrats expect message from Oraclum
+1. Deploy smart contrats expecting messages from Oraclum
 1. Inside your function verify whether the message is signed by Oraclum
 1. Check if the message is expired (per your own delay allowance)
 1. If the message is indeed signed by Oraclum and has not expired, then you can use its data in your smart contract.
