@@ -1,7 +1,5 @@
-# Welcome to Oraclum
-
+## What is Oraclum?
 Oraclum is an off-chain oracle service providing signed data (e.g. prices) to be used on blockchain network (e.g. Ethereum).
-
 
 ## What is off-chain oracle?
 An off-chain oracle is a web service providing signed data that can be verified and used by smart contracts on blockchain network. It is an efficient and easily-deployed oracle service for scenarios where on-chain oracle services like Chainlink are unavailable or impractical.
