@@ -5,7 +5,7 @@ Oraclum is an off-chain oracle service providing signed data (e.g. prices) to be
 An off-chain oracle is a web service providing signed data that can be verified and used by smart contracts on blockchain network. It is light, efficient, and easy to deploy. It can used for scenarios where on-chain oracle services like Chainlink are unavailable or impractical.
 
 ## Why do we need off-chain oracle (while there is on-chain oralces like Chainlink)?
-For the price feeds that are available on Chainlink (or any other on-chain oracle) and sufficient in terms of latency (primarily determined by the deviation threshold), Chainlink would be great. However, that's not always the case. The cost of providing price feeds via on-chain oracle is significant. And that limits the availability and timeliness of the price feeds on Chainlink. You might have found a lot of wanted prices (or other market data) that are either unavailable on Chainlink or provided with a horrible deviation threshold (e.g. 0.5% for ETHUSD and 1% for BNBUSD by Chainlink on Ethereum).
+For the price feeds that are available on Chainlink (or any other on-chain oracle) and sufficient in terms of latency (primarily determined by the deviation threshold), Chainlink would be great. However, that's not always the case. The cost of providing price feeds via on-chain oracle is significant. And that limits the availability and timeliness of the price feeds on Chainlink. You might have found a lot of wanted prices (or other market data) that are either unavailable on Chainlink or provided with a horrible deviation threshold (e.g. 0.5% for ETHUSD or 1% for BNBUSD by Chainlink on Ethereum).
 
 ## How do I use Oraclum?
 1. Deploy smart contrats expect message from Oraclum
