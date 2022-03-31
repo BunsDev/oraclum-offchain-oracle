@@ -4,7 +4,7 @@
 ## /get_version
 #### Description: ```Get Oraclum Service Version```
 #### HTTP Method: ```GET```
-#### Example: ```curl -H "Content-Type:application/json"  http://oraclum.io/get_version```
+#### Example: ```curl -H "Content-Type:application/json"  https://api.oraclum.io/get_version```
 #### Response Result:
 ```json
 {
@@ -17,7 +17,7 @@ or
 {
     "data": {},
     "message":"$errormessage",
-    "status": $errorcode
+    "status": "$errorcode"
 }
 ```
 <br/>
@@ -26,7 +26,7 @@ or
 ## /get_basic_info
 #### Description: ```Get Oraclum Service Basic Info ```
 #### HTTP Method: ```GET ```
-#### Example: ```curl -H "Content-Type:application/json"  http://oraclum.io/get_basic_info```
+#### Example: ```curl -H "Content-Type:application/json"  https://api.oraclum.io/get_basic_info```
 #### Response Result:
 ```json
 {
@@ -39,7 +39,7 @@ or
 {
     "data": {},
     "message":"$errormessage",
-    "status": $errorcode
+    "status": "$errorcode"
 }
 ```
 <br/>
@@ -48,7 +48,7 @@ or
 ## /get_supported_symbols
 #### Description: ```Get Oraclum Service Supported Symbols```
 #### HTTP Method: ```GET```
-#### Example: ```curl -H "Content-Type:application/json"  http://oraclum.io/get_supported_symbols```
+#### Example: ```curl -H "Content-Type:application/json"  https://api.oraclum.io/get_supported_symbols```
 #### Response Result:
 ```json
 {
@@ -69,7 +69,7 @@ or
 {
     "data": {},
     "message":"$errormessage",
-    "status": $errorcode
+    "status": "$errorcode"
 }
 ```
 <br/>
@@ -78,8 +78,8 @@ or
 ## /get_symbol_data
 #### Description: ```Get Oraclum Service Symbol Data```
 #### HTTP Method: ```GET, POST```
-#### Example(GET): ```curl -H "Content-Type:application/json"  http://oraclum.io/get_symbol_data?symbol=VOL-BTCUSD```
-#### Example(POST): ```curl -H "Content-Type:application/json"  http://oraclum.io/get_supported_symbols  -X POST -d "[\"GMTUSDT\",\"VOL-BTCUSD\"]"```
+#### Example(GET): ```curl -H "Content-Type:application/json"  https://api.oraclum.io/get_symbol_data?symbol=VOL-BTCUSD```
+#### Example(POST): ```curl -H "Content-Type:application/json"  https://api.oraclum.io/get_supported_symbols  -X POST -d "[\"GMTUSDT\",\"VOL-BTCUSD\"]"```
 #### Response Result:
 ```json
 {
@@ -113,7 +113,7 @@ or
 {
     "data": {},
     "message":"$errormessage",
-    "status": $errorcode
+    "status": "$errorcode"
 }
 ```
 <br/>
