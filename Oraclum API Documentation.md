@@ -31,7 +31,7 @@ or
 ```json
 {
     "data": {
-        "verified_address": "0xBfF0Bab15d23651e058f3a5441c9060AF4eB6E7A"
+        "signer_address": "0xBfF0Bab15d23651e058f3a5441c9060AF4eB6E7A"
     },
     "status": 200
 }
