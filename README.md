@@ -8,10 +8,10 @@ An off-chain oracle is a web service providing signed data that can be verified 
 For the price feeds that are available on Chainlink with satisfactory property (e.g. deviation threshold), Chainlink would be great. However, that's not always the case. The cost of providing price feeds via on-chain oracle is significant. And that limits the availability and timeliness of the price feeds on Chainlink. You might have found a lot of wanted prices (or other market data) that are either unavailable on Chainlink or provided with a horrible deviation threshold. For example, 0.5% for ETHUSD or 1% for BNBUSD by Chainlink on Ethereum are impractical for a lot of use cases. That is when you need an off-chain oracle.
 
 ## How do I use Oraclum?
-1. Deploy smart contrats expecting messages from Oraclum
-1. Inside your function verify whether the message is signed by the Oraclum signer
+1. Deploy smart contrats expecting messages from Oraclum (see [an example of signed message](https://api.oraclum.io/get_symbol_data?symbol=BTCUSD))
+1. Inside your function verify whether the message is signed by the Oraclum signer (see [signer address](https://api.oraclum.io/get_basic_info))
 1. Check if the message has expired (per your own delay allowance)
-1. If the message is indeed signed by Oraclum and has not expired, then you can use its data in your smart contract.
+1. If the message is indeed signed by Oraclum and has not expired, then you can use its data (i.e. the "value" field) in your smart contract.
 
 More details can be found in the [API document](./Oraclum%20API%20Documentation.md)
 
@@ -26,17 +26,7 @@ Any EVM-compatible blockchain or layer2 network, e.g. Ethereum, BNB Chain, Arbit
 Technically, the only requirement is a mechanism to verfiy the signature of the message inside your smart contracts.
 
 ## What data feeds are available on Oraclum?
-- BTCUSD
-- BTCUSD-DVOL
-- BTCUSD-RVOL
-- ETHUSD
-- ETHUSD-DVOL
-- ETHUSD-RVOL
-- BNBUSD
-- BNBUSD-RVOL
-- AXSUSDT
-- SHIBUSDT
-- ...
+See this [list of supported symbols](https://api.oraclum.io/get_supported_symbols)
 
 ## Can I add/request for new data feeds that I want?
 Yes. Please contact us via github.
