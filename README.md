@@ -8,17 +8,17 @@ An off-chain oracle is a web service providing signed data that can be verified 
 For the price feeds that are available on Chainlink with satisfactory property (e.g. deviation threshold), Chainlink would be great. However, that's not always the case. The cost of providing price feeds via on-chain oracle is significant. And that limits the availability and timeliness of the price feeds on Chainlink. You might have found a lot of wanted prices (or other market data) that are either unavailable on Chainlink or provided with a horrible deviation threshold. For example, 0.5% for ETHUSD or 1% for BNBUSD by Chainlink on Ethereum are impractical for a lot of use cases. That is when you need an off-chain oracle.
 
 ## How do I use Oraclum?
-1. Deploy smart contrats expecting messages from Oraclum (see [an example of signed message](https://api.oraclum.io/get_symbol_data?symbol=BTCUSD))
-1. Inside your function verify whether the message is signed by the Oraclum signer (see [signer address](https://api.oraclum.io/get_basic_info))
-1. Check if the message has expired (per your own delay allowance)
-1. If the message is indeed signed by Oraclum and has not expired, then you can use its data (i.e. the "value" field) in your smart contract.
+1. Deploy smart contrats expecting messages from Oraclum (see [a message example](https://api.oraclum.io/get_symbol_data?symbol=BTCUSD));
+1. Inside your function, verify whether the message is signed by the [Oraclum signer](https://api.oraclum.io/get_basic_info);
+1. Check if the message has expired (per your own delay allowance);
+1. If the message is indeed signed by Oraclum and has not expired, then you can use its data in your smart contract.
 
 More details can be found in the [API document](./Oraclum%20API%20Documentation.md)
 
 ## Is Oraclum centralized or decentralized?
-It's a centralized service, which is why it is efficient and easy to deploy. The centralized nature of Oraclum means you have to trust the signer of the oracle service.
+It's a centralized service, which is why it is light, efficient, and easy to deploy. The centralized nature of Oraclum means you have to trust the signer of the oracle service.
 
-## But why can I trust a centralized service?
+## But why should I trust a centralized service?
 While being centralized, Oraclum is completely open-sourced and fully transparent. You can see the working mechanism and the data flow crystal clear. If ever there were some do-evil action, the service would be dead immediately.
 
 ## Which blockchain networks does Oraclum work with?
@@ -32,7 +32,7 @@ See this [list of supported symbols](https://api.oraclum.io/get_supported_symbol
 Yes. Please contact us via github.
 
 ## Is there any caveat for using Oraclum?
-When your smart contract checks the validity of the message, **it must check whether it is expired**. However, due to the blockchain mechanism, there is a delay between the time point of data being signed and that of the data being checked and used by the smart contract. This delay can be used by attackers to front-run your smart contracts. Unfortunately, such a delay is inevitable so you have to bear with it -- set an allowance for it. But you need to be careful with the allowance. If it's too small, the likelihood of your smart contract seeing an expired message is very high and hence the transactions are very likely to fail. If it's too big, then you are running into greater risks of being front-run.
+When your smart contract checks the validity of the message, **it must check whether it is expired**. However, due to the blockchain mechanism, there is a delay between the time point of data being signed and that of the data being checked and used by the smart contract. This delay can be exploited by attackers to front-run your smart contracts. Unfortunately, such a delay is inevitable so you have to bear with it -- set an allowance for it. But you need to be careful with the allowance. A too small allowance would increase the likelihood of your smart contract seeing an expired message and hence likelihood for the transactions to fail. Whereas, a too big allowance would increase the risk of being front-run.
 
 **Choose your delay allowance carefully! And always take into account the delay and the associated front-run risks!**
 
