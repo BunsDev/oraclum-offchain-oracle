@@ -79,7 +79,7 @@ or
 #### Description: ```Get Oraclum Service Symbol Data```
 #### HTTP Method: ```GET, POST```
 #### Example(GET): ```curl -H "Content-Type:application/json"  https://api.oraclum.io/get_symbol_data?symbol=VOL-BTCUSD```
-#### Example(POST): ```curl -H "Content-Type:application/json"  https://api.oraclum.io/get_supported_symbols  -X POST -d "[\"GMTUSDT\",\"VOL-BTCUSD\"]"```
+#### Example(POST): ```curl -H "Content-Type:application/json"  https://api.oraclum.io/get_symbol_data  -X POST -d "[\"GMTUSDT\",\"VOL-BTCUSD\"]"```
 #### Response Result:
 ```json
 {
