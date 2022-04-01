@@ -32,7 +32,7 @@ See this [list of supported symbols](https://api.oraclum.io/get_supported_symbol
 Yes. Please contact us via github.
 
 ## Is there any caveat for using Oraclum?
-When your smart contract checks the validity of the message, **it must check whether it is expired**. However, due to the blockchain mechanism, there is a delay between the time point of data being signed and that of the data being checked and used by the smart contract. This delay can be exploited by attackers to front-run your smart contracts. Unfortunately, such a delay is inevitable so you have to bear with it -- set an allowance for it. But you need to be careful with the allowance. A too small allowance would increase the likelihood of your smart contract seeing an expired message and hence likelihood for the transactions to fail. Whereas, a too big allowance would increase the risk of being front-run.
+When your smart contract checks the validity of the message, **it must check whether it is expired**. However, due to the blockchain mechanism, there is a delay between the time point of data being signed and that of the data being checked and used by the smart contract. This delay can be exploited by attackers to front-run your smart contracts. Unfortunately, such a delay is inevitable so you have to bear with it -- set an allowance for it. But you need to be careful with the allowance. A too small allowance would increase the likelihood of your smart contract seeing an expired message and hence the likelihood for the transactions to fail. Whereas, a too big allowance would increase the risk of being front-run.
 
 **Choose your delay allowance carefully! And always take into account the delay and the associated front-run risks!**
 
