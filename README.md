@@ -13,7 +13,7 @@ For the price feeds that are available on Chainlink with satisfactory property (
 1. Check if the message has expired (per your own delay allowance);
 1. Provided that the message is indeed signed by Oraclum and has not expired, then you can use its data in your smart contract.
 
-More details can be found in the [API document](./Oraclum%20API%20Documentation.md)
+More details can be found in the [API document](./Oraclum_API_Documentation)
 
 ## Is Oraclum centralized or decentralized?
 It's a centralized service, which is why it is light, efficient, and easy to deploy. The centralized nature of Oraclum means you have to trust the signer of the oracle service.
